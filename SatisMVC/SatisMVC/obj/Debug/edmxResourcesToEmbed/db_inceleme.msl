@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Db_incelemeModelStoreContainer" CdmEntityContainer="Db_incelemeEntities">
+    <EntitySetMapping Name="Bilgisayars">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Bilgisayar">
+        <MappingFragment StoreEntitySet="Bilgisayar">
+          <ScalarProperty Name="bilgisayar_id" ColumnName="bilgisayar_id" />
+          <ScalarProperty Name="bilgisayar_marka" ColumnName="bilgisayar_marka" />
+          <ScalarProperty Name="bilgisayar_model" ColumnName="bilgisayar_model" />
+          <ScalarProperty Name="bilgisayar_ram" ColumnName="bilgisayar_ram" />
+          <ScalarProperty Name="bilgisayar_boyut" ColumnName="bilgisayar_boyut" />
+          <ScalarProperty Name="bilgisayar_hafiza" ColumnName="bilgisayar_hafiza" />
+          <ScalarProperty Name="bilgisayar_isletim_sistemi" ColumnName="bilgisayar_isletim_sistemi" />
+          <ScalarProperty Name="bilgisayar_ekrankarti_model" ColumnName="bilgisayar_ekrankarti_model" />
+          <ScalarProperty Name="bilgisayar_ekrankarti_boyut" ColumnName="bilgisayar_ekrankarti_boyut" />
+          <ScalarProperty Name="bilgisayar_garanti" ColumnName="bilgisayar_garanti" />
+          <ScalarProperty Name="bilgisayar_resim" ColumnName="bilgisayar_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fotograf_Makinesi">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Fotograf_Makinesi">
+        <MappingFragment StoreEntitySet="Fotograf_Makinesi">
+          <ScalarProperty Name="fotoğraf_id" ColumnName="fotoğraf_id" />
+          <ScalarProperty Name="fotoğraf_marka" ColumnName="fotoğraf_marka" />
+          <ScalarProperty Name="fotoğraf_model" ColumnName="fotoğraf_model" />
+          <ScalarProperty Name="fotoğraf_cozunurluk" ColumnName="fotoğraf_cozunurluk" />
+          <ScalarProperty Name="fotoğraf_ekranboyutu" ColumnName="fotoğraf_ekranboyutu" />
+          <ScalarProperty Name="fotoğraf_garanti" ColumnName="fotoğraf_garanti" />
+          <ScalarProperty Name="fotoğraf_resim" ColumnName="fotoğraf_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Motorsiklets">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Motorsiklet">
+        <MappingFragment StoreEntitySet="Motorsiklet">
+          <ScalarProperty Name="motorsiklet_id" ColumnName="motorsiklet_id" />
+          <ScalarProperty Name="motorsiklet_marka" ColumnName="motorsiklet_marka" />
+          <ScalarProperty Name="motorsiklet_model" ColumnName="motorsiklet_model" />
+          <ScalarProperty Name="motorsiklet_yil" ColumnName="motorsiklet_yil" />
+          <ScalarProperty Name="motorsiklet_km" ColumnName="motorsiklet_km" />
+          <ScalarProperty Name="motorsiklet_motorgucu" ColumnName="motorsiklet_motorgucu" />
+          <ScalarProperty Name="motorsiklet_silindir_sayisi" ColumnName="motorsiklet_silindir_sayisi" />
+          <ScalarProperty Name="motorsiklet_resim" ColumnName="motorsiklet_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Otomobils">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Otomobil">
+        <MappingFragment StoreEntitySet="Otomobil">
+          <ScalarProperty Name="otomobil_id" ColumnName="otomobil_id" />
+          <ScalarProperty Name="otomobil_marka" ColumnName="otomobil_marka" />
+          <ScalarProperty Name="otomobil_model" ColumnName="otomobil_model" />
+          <ScalarProperty Name="otomobil_yil" ColumnName="otomobil_yil" />
+          <ScalarProperty Name="otomobil_vites" ColumnName="otomobil_vites" />
+          <ScalarProperty Name="otomobil_km" ColumnName="otomobil_km" />
+          <ScalarProperty Name="otomobil_kasatipi" ColumnName="otomobil_kasatipi" />
+          <ScalarProperty Name="otomobil_renk" ColumnName="otomobil_renk" />
+          <ScalarProperty Name="otomobil_motorgucu" ColumnName="otomobil_motorgucu" />
+          <ScalarProperty Name="otomobil_resim" ColumnName="otomobil_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Playstations">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Playstation">
+        <MappingFragment StoreEntitySet="Playstation">
+          <ScalarProperty Name="playstation_id" ColumnName="playstation_id" />
+          <ScalarProperty Name="playstation_islemci" ColumnName="playstation_islemci" />
+          <ScalarProperty Name="playstation_model" ColumnName="playstation_model" />
+          <ScalarProperty Name="playstation_gpu" ColumnName="playstation_gpu" />
+          <ScalarProperty Name="playstation_hafiza" ColumnName="playstation_hafiza" />
+          <ScalarProperty Name="playstation_garanti" ColumnName="playstation_garanti" />
+          <ScalarProperty Name="playstation_bluetooth" ColumnName="playstation_bluetooth" />
+          <ScalarProperty Name="playstation_resim" ColumnName="playstation_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rollers">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Roller">
+        <MappingFragment StoreEntitySet="Roller">
+          <ScalarProperty Name="rol_id" ColumnName="rol_id" />
+          <ScalarProperty Name="rol_adi" ColumnName="rol_adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sepets">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Sepet">
+        <MappingFragment StoreEntitySet="Sepet">
+          <ScalarProperty Name="sepet_id" ColumnName="sepet_id" />
+          <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+          <ScalarProperty Name="uye_id" ColumnName="uye_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Db_incelemeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tablets">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Tablet">
+        <MappingFragment StoreEntitySet="Tablet">
+          <ScalarProperty Name="tablet_id" ColumnName="tablet_id" />
+          <ScalarProperty Name="tablet_marka" ColumnName="tablet_marka" />
+          <ScalarProperty Name="tablet_model" ColumnName="tablet_model" />
+          <ScalarProperty Name="tablet_isletim_sistemi" ColumnName="tablet_isletim_sistemi" />
+          <ScalarProperty Name="tablet_hafiza" ColumnName="tablet_hafiza" />
+          <ScalarProperty Name="tablet_ekran_cozunurluk" ColumnName="tablet_ekran_cozunurluk" />
+          <ScalarProperty Name="tablet_kamera" ColumnName="tablet_kamera" />
+          <ScalarProperty Name="tablet_bluetooth" ColumnName="tablet_bluetooth" />
+          <ScalarProperty Name="tablet_ram" ColumnName="tablet_ram" />
+          <ScalarProperty Name="tablet_resim" ColumnName="tablet_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telefons">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Telefon">
+        <MappingFragment StoreEntitySet="Telefon">
+          <ScalarProperty Name="telefon_id" ColumnName="telefon_id" />
+          <ScalarProperty Name="telefon_marka" ColumnName="telefon_marka" />
+          <ScalarProperty Name="telefon_model" ColumnName="telefon_model" />
+          <ScalarProperty Name="telefon_isletim_sistemi" ColumnName="telefon_isletim_sistemi" />
+          <ScalarProperty Name="telefon_cozunurluk" ColumnName="telefon_cozunurluk" />
+          <ScalarProperty Name="telefon_boyut" ColumnName="telefon_boyut" />
+          <ScalarProperty Name="telefon_arka_kamera" ColumnName="telefon_arka_kamera" />
+          <ScalarProperty Name="telefon_on_kamera" ColumnName="telefon_on_kamera" />
+          <ScalarProperty Name="telefon_ram" ColumnName="telefon_ram" />
+          <ScalarProperty Name="telefon_hafiza" ColumnName="telefon_hafiza" />
+          <ScalarProperty Name="telefon_garanti" ColumnName="telefon_garanti" />
+          <ScalarProperty Name="telefon_resim" ColumnName="telefon_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Televizyons">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Televizyon">
+        <MappingFragment StoreEntitySet="Televizyon">
+          <ScalarProperty Name="tv_id" ColumnName="tv_id" />
+          <ScalarProperty Name="tv_marka" ColumnName="tv_marka" />
+          <ScalarProperty Name="tv_model" ColumnName="tv_model" />
+          <ScalarProperty Name="tv_ekran_boyut" ColumnName="tv_ekran_boyut" />
+          <ScalarProperty Name="tv_cozunurluk" ColumnName="tv_cozunurluk" />
+          <ScalarProperty Name="tv_resim" ColumnName="tv_resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urunlers">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Urunler">
+        <MappingFragment StoreEntitySet="Urunler">
+          <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+          <ScalarProperty Name="otomobil_id" ColumnName="otomobil_id" />
+          <ScalarProperty Name="telefon_id" ColumnName="telefon_id" />
+          <ScalarProperty Name="tablet_id" ColumnName="tablet_id" />
+          <ScalarProperty Name="tv_id" ColumnName="tv_id" />
+          <ScalarProperty Name="bilgisayar_id" ColumnName="bilgisayar_id" />
+          <ScalarProperty Name="playstation_id" ColumnName="playstation_id" />
+          <ScalarProperty Name="fotograf_makine_id" ColumnName="fotograf_makine_id" />
+          <ScalarProperty Name="motosiklet_id" ColumnName="motosiklet_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uyelers">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Uyeler">
+        <MappingFragment StoreEntitySet="Uyeler">
+          <ScalarProperty Name="uye_id" ColumnName="uye_id" />
+          <ScalarProperty Name="uye_adi" ColumnName="uye_adi" />
+          <ScalarProperty Name="uye_soyad" ColumnName="uye_soyad" />
+          <ScalarProperty Name="uye_mail" ColumnName="uye_mail" />
+          <ScalarProperty Name="uye_sifre" ColumnName="uye_sifre" />
+          <ScalarProperty Name="uye_tel" ColumnName="uye_tel" />
+          <ScalarProperty Name="rol_id" ColumnName="rol_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yorums">
+      <EntityTypeMapping TypeName="Db_incelemeModel.Yorum">
+        <MappingFragment StoreEntitySet="Yorum">
+          <ScalarProperty Name="yorum_id" ColumnName="yorum_id" />
+          <ScalarProperty Name="uye_id" ColumnName="uye_id" />
+          <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+          <ScalarProperty Name="yorum1" ColumnName="yorum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

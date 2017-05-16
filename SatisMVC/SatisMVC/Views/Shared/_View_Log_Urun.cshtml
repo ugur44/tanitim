@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+<head>
+    <style>
+        #nav {
+            line-height: 25px;
+            background: url(/Content/background15.jpg);
+            height: 600px;
+            width: 240px;
+            float: left;
+            padding: 5px;
+            opacity: 0.8;
+        }
+
+
+        #section {
+            line-height: 25px;
+            background: url('/Content/background16.jpg');
+            height: 600px;
+            width: 240px;
+            float: left;
+            padding: 5px;
+            opacity:0.8;
+        }
+
+        #aside {
+            line-height: 25px;
+            background: url('/Content/background21.jpg');
+            height: 600px;
+            width: 240px;
+            float: left;
+            padding: 5px;
+            opacity: 0.8;
+        }
+
+        #article {
+            line-height: 25px;
+            background: url('/Content/background20.jpg');
+            height: 600px;
+            width: 240px;
+            float: left;
+            padding: 5px;
+            opacity: 0.8;
+        }
+
+        #header {
+            line-height: 25px;
+            background: url('/Content/background17.jpg');
+            height: 600px;
+            width: 255px;
+            float: left;
+            padding: 5px;
+            opacity: 0.8;
+        }
+
+        #footer {
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default" style="background:rgba(65, 180, 250, 0.69)">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*<a class="navbar-brand" href="#">Ana</a>*@
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="/Home">Anasayfa</a></li>
+                    <li><a href="/Home/Hakkimizda">Hakkımızda</a></li>
+                    <li><a href="/Home/İletisim">İletişim</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    @{
+                        if (Session["kullanici"] != null || Session["kullaniciAdmin"] != null)
+                        {
+
+                            <li><a href="/Home/Cikis">ÇıkışYap</a></li>
+                            <li class="dropdown">
+                                <ul class="dropdown-menu" role="menu">
+
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li><a href="/Home/Register">Kayıt Ol</a></li>
+                            <li><a href="/Home/Login">Giriş Yap</a></li>
+
+                        }
+
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="~/Scripts/_references.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.intellisense.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/respond.js"></script>
+    <script src="~/Scripts/respond.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/custom.js"></script>
+    <script type="~/text/javascript">/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2) s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script>
+    @{
+        if (Session["kullanici"] != null)
+        {
+            @*  <div class="jumbotron" style="background-color:rgba(152, 38, 38, 0.76)">
+                <ul style="font-size:x-large;">
+            *@
+            <div class="col-lg-12 col-xs-12">
+                
+                <div class="col-lg-2" style="margin-left:3%;">
+                    <div id="nav">
+                        <li style="margin-left:3%;"><a href="/Home/bilgisayarlar" style="color:yellow">Bilgisayarlar</a></li>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="padding-right:5px;">
+                    <div id="section" class="fotograf">
+                        <li style="margin-left:5%"><a href="/Home/fotografMakineler" style="color:yellow">Fotoğraf Makineleri </a></li>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="padding-right:5px;">
+                    <div id="aside" class="otomobil">
+                        <li style="margin-left:7%"><a href="/Home/araclar" style="color:yellow">Otomobiller</a></li>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="padding-right:5px;">
+                    <div id="article" class="tablet">
+                        <li style="margin-left:9%"><a href="/Home/tabletler" style="color:yellow">Tabletler</a></li>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="padding-right:5px;">
+                    <div id="header">
+                      
+                           <li style="margin-left:11%"><a href="/Home/telefonlar" style="color:yellow">Telefonlar</a></li>      
+                       
+                     
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            @*
+                </ul>
+
+                  </div> *@  }
+    }
+
+</body>
+@RenderBody()
+</html>

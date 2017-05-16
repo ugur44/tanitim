@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "tabletler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TABLETLER</h2>
+
+<html>
+<body style="background: url(/Content/background33.jpg); background-size: cover;">
+    @{
+        Db_incelemeEntities db = new Db_incelemeEntities();
+
+
+        var sorgu = (from q in db.Tablets where q.tablet_id != null select new { q.tablet_marka, q.tablet_model, q.tablet_isletim_sistemi, q.tablet_hafiza, q.tablet_ekran_cozunurluk, q.tablet_kamera, q.tablet_bluetooth, q.tablet_ram }).ToArray();
+
+    }
+
+    <style>
+        #section {
+            line-height: 25px;
+            background-color: white;
+            height: 450px;
+            width: 1500px;
+            float: left;
+            padding: 5px;
+            opacity: 0.9;
+        }
+    </style>
+    <div id="section">
+
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr class="active">
+                    <th></th>
+                    <th>Tablet  Marka</th>
+                    <th>Tablet  Model</th>
+                    <th>Tablet İşletim Sistemi</th>
+                    <th>Tablet Hafıza</th>
+                    <th>Tablet Ekran Çözünürlüğü</th>
+                    <th>Tablet Kamera</th>
+                    <th>Tablet Bluetooth</th>
+                    <th>Tablet Ram</th>
+
+                </tr>
+            </thead>
+            @{
+
+                for (int i = 0; i < sorgu.Count(); i++)
+                {
+
+
+                    <tbody>
+                        <tr class="success">
+                            <td></td>
+                            <td>@sorgu[i].tablet_marka</td>
+                            <td>@sorgu[i].tablet_model</td>
+                            <td>@sorgu[i].tablet_isletim_sistemi</td>
+                            <td>@sorgu[i].tablet_hafiza</td>
+                            <td>@sorgu[i].tablet_ekran_cozunurluk</td>
+                            <td>@sorgu[i].tablet_kamera</td>
+                            <td>@sorgu[i].tablet_bluetooth</td>
+                            <td>@sorgu[i].tablet_ram</td>
+
+
+                        </tr>
+
+                    </tbody>
+                }
+            }
+        </table>
+
+        </div>
+</body>
+</html>

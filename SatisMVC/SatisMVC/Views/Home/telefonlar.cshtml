@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "telefonlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TELEFONLAR</h2>
+
+<html>
+<body style="background: url(/Content/background41.jpg); background-size: cover;">
+
+
+
+
+    @{
+        Db_incelemeEntities db = new Db_incelemeEntities();
+        var sorgu = (from q in db.Telefons where q.telefon_id != null select new { q.telefon_marka, q.telefon_model, q.telefon_isletim_sistemi, q.telefon_cozunurluk, q.telefon_boyut, q.telefon_arka_kamera, q.telefon_on_kamera, q.telefon_ram, q.telefon_hafiza, q.telefon_garanti }).ToArray();
+
+    }
+
+    <style>
+        #section {
+            line-height: 25px;
+            background-color: white;
+            height: 450px;
+            width: 1500px;
+            float: left;
+            padding: 5px;
+            opacity: 0.9;
+        }
+</style>
+
+
+    <div id="section">
+        <table class="table table-striped table-hover; ">
+
+            <thead>
+
+                <tr class="active">
+                    <th></th>
+                    <th>Telefon Marka</th>
+                    <th>Telefon Model</th>
+                    <th>Telefon İşletim Sistemi </th>
+                    <th>Telefon Çözünürlük</th>
+                    <th>Telefon Boyut</th>
+                    <th>Telefon Arka Kamera</th>
+                    <th>Telefon Ön Kamera</th>
+                    <th>Telefon Hafıza</th>
+                    <th>Telefon Ram</th>
+                    <th>Telefon Garanti</th>
+                </tr>
+            </thead>
+            @{
+
+                for (int i = 0; i < sorgu.Count(); i++)
+                {
+
+
+                    <tbody>
+                        <tr class="success">
+                            <td></td>
+                            <td>@sorgu[i].telefon_marka</td>
+                            <td>@sorgu[i].telefon_model</td>
+                            <td>@sorgu[i].telefon_isletim_sistemi</td>
+                            <td>@sorgu[i].telefon_cozunurluk</td>
+                            <td>@sorgu[i].telefon_boyut</td>
+                            <td>@sorgu[i].telefon_arka_kamera</td>
+                            <td>@sorgu[i].telefon_on_kamera</td>
+                            <td>@sorgu[i].telefon_hafiza</td>
+                            <td>@sorgu[i].telefon_ram</td>
+                            <td>@sorgu[i].telefon_garanti</td>
+                        </tr>
+
+                    </tbody>
+                }
+            }
+        </table>
+        </div>
+</body>
+</html>

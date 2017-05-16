@@ -1,0 +1,60 @@
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\SatisMVC.dll.config
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\SatisMVC.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\SatisMVC.pdb
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\Antlr3.Runtime.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\Newtonsoft.Json.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Helpers.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Mvc.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Optimization.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Razor.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.WebPages.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\WebGrease.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Helpers.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Mvc.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Optimization.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.Razor.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.WebPages.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\Newtonsoft.Json.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\Antlr3.Runtime.pdb
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\obj\Debug\SatisMVC.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\obj\Debug\SatisMVC.pdb
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\EntityFramework.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\EntityFramework.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Documents\Visual Studio 2013\Projects\SatisMVC\SatisMVC\obj\Debug\SatisMVC.csprojResolveAssemblyReference.cache
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\SatisMVC.dll.config
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\SatisMVC.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\SatisMVC.pdb
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\Antlr3.Runtime.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\EntityFramework.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\Newtonsoft.Json.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Helpers.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Mvc.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Optimization.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Razor.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.WebPages.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\WebGrease.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\Antlr3.Runtime.pdb
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\EntityFramework.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\Newtonsoft.Json.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Helpers.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Mvc.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Optimization.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.Razor.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.WebPages.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\obj\Debug\SatisMVC.dll
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\obj\Debug\SatisMVC.pdb
+C:\Users\adem_\Desktop\SatisMVC\SatisMVC\obj\Debug\SatisMVC.csprojResolveAssemblyReference.cache

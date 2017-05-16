@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="66e696d0ef8d4d9780d890efeba606bd" Name="Diagram1">
+        <EntityTypeShape EntityType="Db_incelemeModel.Bilgisayar" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Fotograf_Makinesi" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Motorsiklet" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Otomobil" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Playstation" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Roller" Width="1.5" PointX="0.75" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Sepet" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Tablet" Width="1.5" PointX="0.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Telefon" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Televizyon" Width="1.5" PointX="0.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Urunler" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Uyeler" Width="1.5" PointX="3" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Db_incelemeModel.Yorum" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Bilgisayar" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Fotograf_Makinesi" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Motorsiklet" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Otomobil" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Playstation" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Uyeler_Roller" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Sepet_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Sepet_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Tablet" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Telefon" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Urunler_Televizyon" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Yorum_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="Db_incelemeModel.FK_Yorum_Uyeler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Db_incelemeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bilgisayar">
+    <Key>
+      <PropertyRef Name="bilgisayar_id" />
+    </Key>
+    <Property Name="bilgisayar_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bilgisayar_marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_ram" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_boyut" Type="Double" />
+    <Property Name="bilgisayar_hafiza" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_isletim_sistemi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_ekrankarti_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_ekrankarti_boyut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_garanti" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bilgisayar_resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Bilgisayar" FromRole="Bilgisayar" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Fotograf_Makinesi">
+    <Key>
+      <PropertyRef Name="fotoğraf_id" />
+    </Key>
+    <Property Name="fotoğraf_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fotoğraf_marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fotoğraf_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fotoğraf_cozunurluk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fotoğraf_ekranboyutu" Type="Double" />
+    <Property Name="fotoğraf_garanti" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fotoğraf_resim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Fotograf_Makinesi" FromRole="Fotograf_Makinesi" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Motorsiklet">
+    <Key>
+      <PropertyRef Name="motorsiklet_id" />
+    </Key>
+    <Property Name="motorsiklet_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="motorsiklet_marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="motorsiklet_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="motorsiklet_yil" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="motorsiklet_km" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="motorsiklet_motorgucu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="motorsiklet_silindir_sayisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="motorsiklet_resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Motorsiklet" FromRole="Motorsiklet" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Otomobil">
+    <Key>
+      <PropertyRef Name="otomobil_id" />
+    </Key>
+    <Property Name="otomobil_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="otomobil_marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_yil" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_vites" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_km" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_kasatipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_renk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_motorgucu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="otomobil_resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Otomobil" FromRole="Otomobil" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Playstation">
+    <Key>
+      <PropertyRef Name="playstation_id" />
+    </Key>
+    <Property Name="playstation_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="playstation_islemci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="playstation_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="playstation_gpu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="playstation_hafiza" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="playstation_garanti" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="playstation_bluetooth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="playstation_resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Playstation" FromRole="Playstation" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Roller">
+    <Key>
+      <PropertyRef Name="rol_id" />
+    </Key>
+    <Property Name="rol_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rol_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Uyelers" Relationship="Self.FK_Uyeler_Roller" FromRole="Roller" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="Sepet">
+    <Key>
+      <PropertyRef Name="sepet_id" />
+    </Key>
+    <Property Name="sepet_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urun_id" Type="Int32" />
+    <Property Name="uye_id" Type="Int32" />
+    <NavigationProperty Name="Urunler" Relationship="Self.FK_Sepet_Urunler" FromRole="Sepet" ToRole="Urunler" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_Sepet_Uyeler" FromRole="Sepet" ToRole="Uyeler" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tablet">
+    <Key>
+      <PropertyRef Name="tablet_id" />
+    </Key>
+    <Property Name="tablet_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tablet_marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_isletim_sistemi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_hafiza" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_ekran_cozunurluk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_kamera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_bluetooth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_ram" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tablet_resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Tablet" FromRole="Tablet" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Telefon">
+    <Key>
+      <PropertyRef Name="telefon_id" />
+    </Key>
+    <Property Name="telefon_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="telefon_marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_isletim_sistemi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_cozunurluk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_boyut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_arka_kamera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_on_kamera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_ram" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_hafiza" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_garanti" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon_resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Telefon" FromRole="Telefon" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Televizyon">
+    <Key>
+      <PropertyRef Name="tv_id" />
+    </Key>
+    <Property Name="tv_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tv_marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tv_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tv_ekran_boyut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tv_cozunurluk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tv_resim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunlers" Relationship="Self.FK_Urunler_Televizyon" FromRole="Televizyon" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="urun_id" />
+    </Key>
+    <Property Name="urun_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="otomobil_id" Type="Int32" />
+    <Property Name="telefon_id" Type="Int32" />
+    <Property Name="tablet_id" Type="Int32" />
+    <Property Name="tv_id" Type="Int32" />
+    <Property Name="bilgisayar_id" Type="Int32" />
+    <Property Name="playstation_id" Type="Int32" />
+    <Property Name="fotograf_makine_id" Type="Int32" />
+    <Property Name="motosiklet_id" Type="Int32" />
+    <NavigationProperty Name="Bilgisayar" Relationship="Self.FK_Urunler_Bilgisayar" FromRole="Urunler" ToRole="Bilgisayar" />
+    <NavigationProperty Name="Fotograf_Makinesi" Relationship="Self.FK_Urunler_Fotograf_Makinesi" FromRole="Urunler" ToRole="Fotograf_Makinesi" />
+    <NavigationProperty Name="Motorsiklet" Relationship="Self.FK_Urunler_Motorsiklet" FromRole="Urunler" ToRole="Motorsiklet" />
+    <NavigationProperty Name="Otomobil" Relationship="Self.FK_Urunler_Otomobil" FromRole="Urunler" ToRole="Otomobil" />
+    <NavigationProperty Name="Playstation" Relationship="Self.FK_Urunler_Playstation" FromRole="Urunler" ToRole="Playstation" />
+    <NavigationProperty Name="Sepets" Relationship="Self.FK_Sepet_Urunler" FromRole="Urunler" ToRole="Sepet" />
+    <NavigationProperty Name="Tablet" Relationship="Self.FK_Urunler_Tablet" FromRole="Urunler" ToRole="Tablet" />
+    <NavigationProperty Name="Telefon" Relationship="Self.FK_Urunler_Telefon" FromRole="Urunler" ToRole="Telefon" />
+    <NavigationProperty Name="Televizyon" Relationship="Self.FK_Urunler_Televizyon" FromRole="Urunler" ToRole="Televizyon" />
+    <NavigationProperty Name="Yorums" Relationship="Self.FK_Yorum_Urunler" FromRole="Urunler" ToRole="Yorum" />
+  </EntityType>
+  <EntityType Name="Uyeler">
+    <Key>
+      <PropertyRef Name="uye_id" />
+    </Key>
+    <Property Name="uye_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uye_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uye_soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uye_mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="uye_sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uye_tel" Type="Int32" />
+    <Property Name="rol_id" Type="Int32" />
+    <NavigationProperty Name="Roller" Relationship="Self.FK_Uyeler_Roller" FromRole="Uyeler" ToRole="Roller" />
+    <NavigationProperty Name="Sepets" Relationship="Self.FK_Sepet_Uyeler" FromRole="Uyeler" ToRole="Sepet" />
+    <NavigationProperty Name="Yorums" Relationship="Self.FK_Yorum_Uyeler" FromRole="Uyeler" ToRole="Yorum" />
+  </EntityType>
+  <EntityType Name="Yorum">
+    <Key>
+      <PropertyRef Name="yorum_id" />
+    </Key>
+    <Property Name="yorum_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uye_id" Type="Int32" />
+    <Property Name="urun_id" Type="Int32" />
+    <Property Name="yorum1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urunler" Relationship="Self.FK_Yorum_Urunler" FromRole="Yorum" ToRole="Urunler" />
+    <NavigationProperty Name="Uyeler" Relationship="Self.FK_Yorum_Uyeler" FromRole="Yorum" ToRole="Uyeler" />
+  </EntityType>
+  <Association Name="FK_Urunler_Bilgisayar">
+    <End Role="Bilgisayar" Type="Self.Bilgisayar" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bilgisayar">
+        <PropertyRef Name="bilgisayar_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="bilgisayar_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Fotograf_Makinesi">
+    <End Role="Fotograf_Makinesi" Type="Self.Fotograf_Makinesi" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fotograf_Makinesi">
+        <PropertyRef Name="fotoğraf_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="fotograf_makine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Motorsiklet">
+    <End Role="Motorsiklet" Type="Self.Motorsiklet" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Motorsiklet">
+        <PropertyRef Name="motorsiklet_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="motosiklet_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Otomobil">
+    <End Role="Otomobil" Type="Self.Otomobil" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otomobil">
+        <PropertyRef Name="otomobil_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="otomobil_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Playstation">
+    <End Role="Playstation" Type="Self.Playstation" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Playstation">
+        <PropertyRef Name="playstation_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="playstation_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Uyeler_Roller">
+    <End Role="Roller" Type="Self.Roller" Multiplicity="0..1" />
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roller">
+        <PropertyRef Name="rol_id" />
+      </Principal>
+      <Dependent Role="Uyeler">
+        <PropertyRef Name="rol_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sepet_Urunler">
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sepet" Type="Self.Sepet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="urun_id" />
+      </Principal>
+      <Dependent Role="Sepet">
+        <PropertyRef Name="urun_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sepet_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sepet" Type="Self.Sepet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="uye_id" />
+      </Principal>
+      <Dependent Role="Sepet">
+        <PropertyRef Name="uye_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Tablet">
+    <End Role="Tablet" Type="Self.Tablet" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tablet">
+        <PropertyRef Name="tablet_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="tablet_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Telefon">
+    <End Role="Telefon" Type="Self.Telefon" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Telefon">
+        <PropertyRef Name="telefon_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="telefon_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Televizyon">
+    <End Role="Televizyon" Type="Self.Televizyon" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Televizyon">
+        <PropertyRef Name="tv_id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="tv_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Yorum_Urunler">
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Yorum" Type="Self.Yorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="urun_id" />
+      </Principal>
+      <Dependent Role="Yorum">
+        <PropertyRef Name="urun_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Yorum_Uyeler">
+    <End Role="Uyeler" Type="Self.Uyeler" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Yorum" Type="Self.Yorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uyeler">
+        <PropertyRef Name="uye_id" />
+      </Principal>
+      <Dependent Role="Yorum">
+        <PropertyRef Name="uye_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Db_incelemeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bilgisayars" EntityType="Self.Bilgisayar" />
+    <EntitySet Name="Fotograf_Makinesi" EntityType="Self.Fotograf_Makinesi" />
+    <EntitySet Name="Motorsiklets" EntityType="Self.Motorsiklet" />
+    <EntitySet Name="Otomobils" EntityType="Self.Otomobil" />
+    <EntitySet Name="Playstations" EntityType="Self.Playstation" />
+    <EntitySet Name="Rollers" EntityType="Self.Roller" />
+    <EntitySet Name="Sepets" EntityType="Self.Sepet" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Tablets" EntityType="Self.Tablet" />
+    <EntitySet Name="Telefons" EntityType="Self.Telefon" />
+    <EntitySet Name="Televizyons" EntityType="Self.Televizyon" />
+    <EntitySet Name="Urunlers" EntityType="Self.Urunler" />
+    <EntitySet Name="Uyelers" EntityType="Self.Uyeler" />
+    <EntitySet Name="Yorums" EntityType="Self.Yorum" />
+    <AssociationSet Name="FK_Urunler_Bilgisayar" Association="Self.FK_Urunler_Bilgisayar">
+      <End Role="Bilgisayar" EntitySet="Bilgisayars" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Fotograf_Makinesi" Association="Self.FK_Urunler_Fotograf_Makinesi">
+      <End Role="Fotograf_Makinesi" EntitySet="Fotograf_Makinesi" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Motorsiklet" Association="Self.FK_Urunler_Motorsiklet">
+      <End Role="Motorsiklet" EntitySet="Motorsiklets" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Otomobil" Association="Self.FK_Urunler_Otomobil">
+      <End Role="Otomobil" EntitySet="Otomobils" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Playstation" Association="Self.FK_Urunler_Playstation">
+      <End Role="Playstation" EntitySet="Playstations" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Uyeler_Roller" Association="Self.FK_Uyeler_Roller">
+      <End Role="Roller" EntitySet="Rollers" />
+      <End Role="Uyeler" EntitySet="Uyelers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sepet_Urunler" Association="Self.FK_Sepet_Urunler">
+      <End Role="Urunler" EntitySet="Urunlers" />
+      <End Role="Sepet" EntitySet="Sepets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sepet_Uyeler" Association="Self.FK_Sepet_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyelers" />
+      <End Role="Sepet" EntitySet="Sepets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Tablet" Association="Self.FK_Urunler_Tablet">
+      <End Role="Tablet" EntitySet="Tablets" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Telefon" Association="Self.FK_Urunler_Telefon">
+      <End Role="Telefon" EntitySet="Telefons" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Televizyon" Association="Self.FK_Urunler_Televizyon">
+      <End Role="Televizyon" EntitySet="Televizyons" />
+      <End Role="Urunler" EntitySet="Urunlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Yorum_Urunler" Association="Self.FK_Yorum_Urunler">
+      <End Role="Urunler" EntitySet="Urunlers" />
+      <End Role="Yorum" EntitySet="Yorums" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Yorum_Uyeler" Association="Self.FK_Yorum_Uyeler">
+      <End Role="Uyeler" EntitySet="Uyelers" />
+      <End Role="Yorum" EntitySet="Yorums" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

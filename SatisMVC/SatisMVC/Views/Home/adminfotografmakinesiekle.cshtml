@@ -1,0 +1,300 @@
+﻿
+<html>
+<body style="background: url(/Content/background2.jpg); background-size: cover" ">
+
+
+    @{
+        Db_incelemeEntities db = new Db_incelemeEntities();
+        int a = Int32.Parse(Session["kullaniciAdmin"].ToString());
+
+        if (ViewBag.Mesaj != null)
+        {
+            <h2>@ViewBag.Mesaj</h2>
+        }
+        <style>
+            #nav {
+                line-height: 25px;
+                background-color: #eeeeee;
+                height: 450px;
+                width: 210px;
+                float: left;
+                padding: 5px;
+                opacity: 0.9;
+            }
+
+
+            #section {
+                line-height: 25px;
+                background-color: white;
+                height: 450px;
+                width: 866px;
+                float:left;
+                padding: 5px;
+                opacity: 0.9;
+            }
+
+
+
+            #article {
+                line-height: 25px;
+                background-color: white;
+                height: 450px;
+                width: 460px;
+                float: right;
+                padding: 5px;
+                opacity: 0.9;
+            }
+        </style>
+
+
+
+        <div id="nav">
+
+
+
+            <li>
+                <a href="/Home/adminfotografmakinesiekle">
+                    <i class="fa fa-book fa-fw">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">fotoğraf makinesi  ekle</span>
+                </a>
+            </li>
+            <li>
+                <a href="/Home/adminaracekle">
+                    <i class="fa fa-book fa-fw">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">otomobil ekle</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/Home/adminbilgisayarekle">
+                    <i class="fa fa-user fa-fw">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">bilgisayar ekle</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/Home/admintelefonekle">
+                    <i class="fa fa-user fa-fw">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">telefon ekle</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/Home/admintabletekle">
+                    <i class="fa fa-user fa-fw">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">tablet ekle</span>
+                </a>
+            </li>
+
+
+        </div>
+
+
+        <div id="article">
+
+            <div>
+
+
+                <form action="/Home/adminfotografmakinesiekle" method="post">
+
+                    @{
+                        Db_incelemeEntities db1 = new Db_incelemeEntities();
+                        string nulValue = " " + "/" + " ";
+
+                        var sorgu = (from q in db.Fotograf_Makinesi select new { q.fotoğraf_cozunurluk,q.fotoğraf_ekranboyutu,q.fotoğraf_garanti,q.fotoğraf_marka, q.fotoğraf_model, q.fotoğraf_id }).ToArray();
+                        <ul style=" list-style-type: none !important;">
+                            @for (int i = 0; i < sorgu.Count(); i++)
+                            {
+                                <li>
+
+
+                                    <input type="radio" class="checkboxGet" value="@sorgu[i].fotoğraf_id" name="silme" onchange="callCheck()" />
+                                    @sorgu[i].fotoğraf_marka
+                                    @nulValue
+                                    @sorgu[i].fotoğraf_model
+                                    @nulValue
+                                    @sorgu[i].fotoğraf_cozunurluk
+                                    @nulValue
+                                    @sorgu[i].fotoğraf_ekranboyutu
+                                    @nulValue
+                                    @sorgu[i].fotoğraf_garanti
+                                    @nulValue
+                                </li>
+                            }
+
+                        </ul>
+                        <br />
+                        <button type="submit" name="sil" class="btn btn-primary" style="margin-bottom:5px;">
+                            Foto sil
+                        </button>
+
+                    }
+                </form>
+                <form action="/Home/adminfotografmakinesiduzenle" method="get">
+                    @{
+
+                        Db_incelemeEntities db2 = new Db_incelemeEntities();
+
+                        var sorguu = (from q in db.Fotograf_Makinesi select new { q.fotoğraf_marka, q.fotoğraf_id }).ToArray();
+
+
+                        for (int i = 0; i < sorgu.Count(); i++)
+                        {
+                            <input type="hidden" id="hdVal" value="@sorguu[i].fotoğraf_id" name="duzenle" />
+                        }
+                        <button type="submit" name="duzen" class="btn btn-primary">
+                            Foto Duzenle
+                        </button>
+                    }
+                </form>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        @* <div id="wrapper">
+            <!--BEGIN SIDEBAR MENU-->
+            <nav id="sidebar" role="navigation" data-step="2" data-position="right" class="navbar-default navbar-static-side" style="min-height: 100%;">
+
+            </nav>
+            <!--END SIDEBAR MENU-->
+            <!--BEGIN PAGE WRAPPER-->
+
+                      <div id="page-wrapper">
+                <div class="pace-done animated flash">
+        *@
+
+
+
+        <div id="section">
+
+            <div class="panel panel-green" style="margin-top:8%">
+                <div class="panel-body pan">
+                    <form action="/Home/adminfotografmakinesiekle" class="form-horizontal" method="post">
+                        <div class="form-body pal">
+
+                            <div class="form-group">
+                                <label for="krediCheck" class="col-md-3 control-label">
+                                    marka
+                                </label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="fa fa-sort-numeric-asc"></i>
+                                        <input name="fotografmarka" placeholder="fotografmarka" class="form-control" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nameCheck" class="col-md-3 control-label">
+                                    model
+                                </label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="fa fa-bars"></i>
+                                        <input name="fotografmodel" placeholder="fotograf model giriniz" class="form-control" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nameCheck" class="col-md-3 control-label">
+                                    cozunurluk
+                                </label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="fa fa-bars"></i>
+                                        <input name="fotografcozunurluk" placeholder="fotograf cozunurluk giriniz" class="form-control" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nameCheck" class="col-md-3 control-label">
+                                    ekranboyut
+                                </label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="fa fa-bars"></i>
+                                        <input name="fotografmakinesiboyut" placeholder="fotograf makinesi ekran boyutu giriniz" class="form-control" type="number" required>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label for="nameCheck" class="col-md-3 control-label">
+                                    garanti
+                                </label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="fa fa-bars"></i>
+                                        <input name="fotografgaranti" placeholder="fotograf garanti giriniz" class="form-control" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-actions pal">
+                                <div class="form-group mbn">
+                                    <div class="col-md-offset-3 col-md-6">
+                                        <button type="submit" id="deneme" class="btn btn-primary">
+                                            fotograf makinesi Ekle
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @*
+                    </div>
+                </div>
+            </div>*@
+
+
+
+
+
+
+
+            <!--END PAGE WRAPPER-->
+
+
+    }
+
+</body>
+
+</html>
+<script>
+    function callCheck() {
+        var checkedValue = null;
+        var inputElements = document.getElementsByClassName('checkboxGet');
+        for (var i = 0; inputElements[i]; ++i) {
+            if (inputElements[i].checked) {
+                checkedValue = inputElements[i].value;
+                break;
+            }
+        }
+        document.getElementById('hdVal').value = checkedValue;
+        console.log(checkedValue);
+
+    }
+
+
+
+</script>
+
+
+
+
